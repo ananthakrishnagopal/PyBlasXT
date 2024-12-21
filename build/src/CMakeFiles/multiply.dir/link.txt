@@ -1,1 +1,0 @@
-/usr/bin/c++ -fPIC -flto -shared  -o multiply.cpython-313-x86_64-linux-gnu.so CMakeFiles/multiply.dir/sgemm.cpp.o 
