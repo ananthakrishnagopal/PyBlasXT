@@ -12,7 +12,7 @@ namespace py = pybind11;
 /* library to perfrom matrix multiplication */
 
 typedef py::array_t<float> farray;
-farray sgemm(farray fA,farray fB,farray fdevices){
+farray sgemm(farray fA,farray fB,py::array_t<int> fdevices){
 	py::buffer_info bA = fA.request();
 	py::buffer_info bB = fB.request();
 	py::buffer_info bdevices = fdevices.request();
@@ -70,7 +70,7 @@ farray sgemm(farray fA,farray fB,farray fdevices){
 
 typedef py::array_t<double> darray;
 
-darray dgemm(darray fA,darray fB,darray fdevices){
+darray dgemm(darray fA,darray fB,py::array_t<int> fdevices){
 	py::buffer_info bA = fA.request();
 	py::buffer_info bB = fB.request();
 	py::buffer_info bdevices = fdevices.request();

@@ -347,7 +347,7 @@ CUDA_NVCC_FLAGS_RELEASE:STRING=
 // builds.
 CUDA_NVCC_FLAGS_RELWITHDEBINFO:STRING=
 
-//"OpenCL" library
+//Path to a library.
 CUDA_OpenCL_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libOpenCL.so
 
 //Propagate C/CXX_FLAGS and friends to the host compiler via -Xcompile
@@ -384,7 +384,7 @@ CUDA_cublasLt_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libcublasLt.so
 //Path to a library.
 CUDA_cublasLt_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libcublasLt_static.a
 
-//"cublas" library
+//Path to a library.
 CUDA_cublas_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libcublas.so
 
 //Path to a library.
@@ -399,10 +399,10 @@ CUDA_cudadevrt_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libcudadevrt.a
 //Path to a library.
 CUDA_cudart_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libcudart.so
 
-//static CUDA runtime library
+//Path to a library.
 CUDA_cudart_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libcudart_static.a
 
-//"cufft" library
+//Path to a library.
 CUDA_cufft_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libcufft.so
 
 //Path to a library.
@@ -414,31 +414,31 @@ CUDA_cufftw_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libcufftw.so
 //Path to a library.
 CUDA_culibos_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libculibos.a
 
-//"cupti" library
-CUDA_cupti_LIBRARY:FILEPATH=/usr/local/cuda-12.6/extras/CUPTI/lib64/libcupti.so
+//Path to a library.
+CUDA_cupti_LIBRARY:FILEPATH=/usr/local/cuda-12.6/bin/../extras/CUPTI/lib64/libcupti.so
 
 //Path to a library.
 CUDA_cupti_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/bin/../extras/CUPTI/lib64/libcupti_static.a
 
-//"curand" library
+//Path to a library.
 CUDA_curand_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libcurand.so
 
 //Path to a library.
 CUDA_curand_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libcurand_static.a
 
-//"cusolver" library
+//Path to a library.
 CUDA_cusolver_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libcusolver.so
 
 //Path to a library.
 CUDA_cusolver_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libcusolver_static.a
 
-//"cusparse" library
+//Path to a library.
 CUDA_cusparse_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libcusparse.so
 
 //Path to a library.
 CUDA_cusparse_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libcusparse_static.a
 
-//"nppc" library
+//Path to a library.
 CUDA_nppc_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libnppc.so
 
 //Path to a library.
@@ -504,13 +504,13 @@ CUDA_nppitc_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libnppitc.so
 //Path to a library.
 CUDA_nppitc_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libnppitc_static.a
 
-//"npps" library
+//Path to a library.
 CUDA_npps_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libnpps.so
 
 //Path to a library.
 CUDA_npps_static_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libnpps_static.a
 
-//"nvToolsExt" library
+//Path to a library.
 CUDA_nvToolsExt_LIBRARY:FILEPATH=/usr/local/cuda-12.6/lib64/libnvToolsExt.so
 
 //Path to a library.
@@ -584,6 +584,15 @@ PyBlasXT_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 PyBlasXT_SOURCE_DIR:STATIC=/home/vaasudeva/PyBlasXT/src
+
+//Value Computed by CMake
+VERSION_BINARY_DIR:STATIC=/home/vaasudeva/PyBlasXT/build
+
+//Value Computed by CMake
+VERSION_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+VERSION_SOURCE_DIR:STATIC=/home/vaasudeva/PyBlasXT
 
 //Value Computed by CMake
 pybind11_BINARY_DIR:STATIC=/home/vaasudeva/PyBlasXT/build/extern/pybind11
