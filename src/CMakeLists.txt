@@ -9,5 +9,5 @@ find_package(CUDA REQUIRED)
 include_directories(utils)
 
 
-pybind11_add_module(multiply sgemm.cu)
-target_link_libraries(multiply PRIVATE CUDA::cublas)
+pybind11_add_module(PyBlasXT gemm.cu)
+target_link_libraries(PyBlasXT PRIVATE CUDA::cublas)
