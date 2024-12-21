@@ -47,15 +47,19 @@ farray multiply(farray fA,farray fB,farray fdevices){
 	CUBLAS_CHECK(cublasXtDeviceSelect(handle,fdevices.size(),devices));
 	elementType alpha = 1.0;
 	elementType beta = 0.0;
+
+	// performs (A@B).T
+	//= B.T @ A.T
+	//((A @ B ).T).T = (B.T@A.T).T
 	CUBLAS_CHECK(
 			cublasXtSgemm(handle,
-				CUBLAS_OP_T,CUBLAS_OP_T,
+				CUBLAS_OP_N,CUBLAS_OP_N,
 				M,N,K,
 				&alpha,
-				A,K,
 				B,N,
+				A,K,
 				&beta,
-				C,M)
+				C,N)
 		    );
 
 
