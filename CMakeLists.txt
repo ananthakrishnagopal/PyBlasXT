@@ -6,4 +6,5 @@ project(PyBlasXT
 
 #add_subdirectory(extern)
 add_subdirectory(extern/pybind11)
+add_subdirectory(src)
 

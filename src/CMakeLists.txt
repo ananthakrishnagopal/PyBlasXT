@@ -4,4 +4,4 @@ project(PyBlasXT
 	VERSION 0.1
 	LANGUAGES C CXX CUDA)
 
-
+pybind11_add_module(hello testing.cpp)
