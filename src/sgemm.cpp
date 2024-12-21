@@ -1,9 +1,17 @@
 #include<pybind11/pybind11.h>
 #include<pybind11/numpy.h>
 #include<iostream>
+
+#include<cublas_v2.h>
+#include<cuda_runtime.h>
+
+#include<cublas_utils.h>
+
 namespace py = pybind11;
 
 /* library to perfrom matrix multiplication */
+
+
 typedef py::array_t<float> farray;
 
 farray multiply(farray fA,farray fB){
